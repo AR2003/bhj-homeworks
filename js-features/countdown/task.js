@@ -12,6 +12,9 @@ let timerId = setInterval(launchCounting,1000)
 
 
 
+
+// для формата hh:mm:ss необходимо изменить начальные данные в html
+
 function counterFormat(h,m,s) {
 	counterFormatted = "";
 	if (String(h).length < 2) {

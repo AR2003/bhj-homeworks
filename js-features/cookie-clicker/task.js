@@ -25,9 +25,3 @@ start_count = Number(document.getElementById("clicker__counter").textContent);
 cookieImage.onclick = changeSize;
 
 
-//while () {
-//	if ( (d.gettime() - start) >= 1000 ) {
-//		document.getElementById("clicker__counter").textContent
-//	}
-//}
-//setInterval(clicksCount,1000,Number(document.getElementById("clicker__counter").textContent))
