@@ -1,6 +1,8 @@
 function closeWindow() {
-	document.getElementById("modal_main").classList.remove("modal_active")
-	document.getElementById("modal_success").classList.remove("modal_active")
+	this.closest(".modal").classList.remove("modal_active")
+
+//	document.getElementById("modal_main").classList.remove("modal_active")
+//	document.getElementById("modal_success").classList.remove("modal_active")
 }
 
 function changeWindow() {
