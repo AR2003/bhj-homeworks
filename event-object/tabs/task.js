@@ -1,5 +1,5 @@
 function menuProcess() {
-    menuList = Array.from(document.querySelectorAll(".tab"))    
+    let menuList = Array.from(document.querySelectorAll(".tab"))    
     let index = menuList.indexOf(this)  	
     menuList.forEach((item, index, array) => { item.classList.remove("tab_active")})
     this.classList.add("tab_active")
@@ -9,7 +9,7 @@ function menuProcess() {
 }
 
 
-menuList = document.querySelectorAll(".tab")
-for ( i = 0; i < menuList.length; i++) {
+const menuList = document.querySelectorAll(".tab")
+for (let i = 0; i < menuList.length; i++) {
 	menuList[i].addEventListener("click",menuProcess)
 }

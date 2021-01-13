@@ -7,11 +7,12 @@ function linkReaction() {
 		} else {
 			activeMenu = document.getElementsByClassName("menu_active");
             for ( i = 0; i < activeMenu.length; i++) {
-            activeMenu[i].classList.remove("menu_active");
+            		activeMenu[i].classList.remove("menu_active");
             }
 			this.closest("li").querySelector('ul').classList.add("menu_active")
-		    return false
+		  //  return false
 		}
+		return false
 	} 
 }
 

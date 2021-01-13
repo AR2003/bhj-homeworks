@@ -4,7 +4,7 @@ function dropClick() {
 }
 
 
-selectedItem = document.getElementsByClassName("dropdown")
+const selectedItem = document.getElementsByClassName("dropdown")
 selectedItem[0].onclick = function() {
 	if (this.getElementsByClassName("dropdown__list")[0].classList.contains("dropdown__list_active")) {
 		this.getElementsByClassName("dropdown__list")[0].classList.remove("dropdown__list_active")
@@ -14,7 +14,7 @@ selectedItem[0].onclick = function() {
 	return false
 }
 
-allMenu = document.getElementsByClassName("dropdown__item") 
-for (i = 0; i < allMenu.length; i++) {
+const allMenu = document.getElementsByClassName("dropdown__item") 
+for (let i = 0; i < allMenu.length; i++) {
 	allMenu[i].onclick = dropClick
 }
