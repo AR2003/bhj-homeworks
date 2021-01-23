@@ -34,7 +34,7 @@ function buttonProcess() {
 	    for (let i = 0; i < allTasks.length; i++) {
 	    	arrOfTasks.push(allTasks[i].textContent)
 	    }
-	    localStorage.setItem("myTasks", arrOfTasks)
+	    localStorage.setItem("myTasks", JSON.stringify(arrOfTasks))
     }
 
  }
@@ -72,13 +72,12 @@ const taskAddButton = document.querySelector(".tasks__add");
 taskAddButton.addEventListener("click",buttonProcess);
 
 // восстановление списка задач из local storage
-savedTasks = localStorage.getItem("myTasks")
-if  (savedTasks != null) {
-	savedTasks = savedTasks.split(",");
-    for (let i = 0; i < savedTasks.length; i++) {
+if (localStorage.myTasks != undefined) {
+	savedTasks = JSON.parse(localStorage.myTasks);
+	for (let i = 0; i < savedTasks.length; i++) {
 	    	addTask(savedTasks[i])
-	    }	
-}
+	}	
+}	
 
 
 

@@ -1,8 +1,14 @@
 function tipProcess(event) {
-	const currentActive = document.querySelector(".tooltip_active");
-	if (currentActive != null) {
-		currentActive.classList.remove("tooltip_active")
-	}
+	
+    event.preventDefault();
+    const currentActive = document.querySelector(".tooltip_active");
+    if (currentActive != null) {
+        currentActive.classList.remove("tooltip_active");
+        if (this.nextElementSibling == currentActive) {
+            return false;
+        }
+    }
+
 
     let toInsert = document.createElement('div');
     toInsert.className = "tooltip tooltip_active";  
@@ -16,8 +22,7 @@ function tipProcess(event) {
     	toInsert.style = `left: ${coord.left-toInsert.offsetWidth+"px"}; top: ${coord.top+"px"}`;
     } else if (this.dataset.position == "top") {
     	toInsert.style = `left: ${coord.left+"px"}; top: ${coord.top-toInsert.offsetHeight+"px"}`;
-    } 
-    event.preventDefault();
+    }    
 	return false
 }
 
